@@ -1,0 +1,46 @@
+.viewport {
+    width: 60%;
+}
+
+#chatPanel {
+    margin-top: 20px;
+    background-color: #E0E0E2;
+    height: 260px;
+    overflow-y: scroll;
+}
+
+.msg {
+    margin-bottom: 10px;
+}
+
+.msg:last-child {
+    margin-bottom: 0;
+}
+
+.msg.me {
+    text-align: right;
+}
+
+.msgContent {
+    border-radius: 3px;
+    border: 1px solid #fff;
+    display: inline-block;
+    padding: 2px 5px;
+    background-color: #fff;
+}
+
+.msg.me .msgContent {
+    background-color: #1A79EC;
+    color: #fff;
+    border-color: #1A79EC;
+}
+
+#btnSend {
+    margin-top: 10px;
+    float: right;
+}
+
+input:disabled {
+    cursor: not-allowed;
+    pointer-events: all !important;
+}

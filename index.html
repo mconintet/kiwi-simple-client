@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Chat Room</title>
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/toastr/toastr.min.css">
+    <link rel="stylesheet" href="assets/style.css"/>
+</head>
+<body>
+<div class="viewport container">
+    <div id="main">
+        <h2>Simple Client</h2>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="input-group input-group-sm">
+                    <input type="text" id="srvAddrInput" class="form-control" placeholder="Service URI">
+                <span class="input-group-btn">
+                    <input id="btnConnect" class="btn btn-default" type="button" value="Connect"/>
+                    <input id="btnDisconnect" disabled="disabled" class="btn btn-default" type="button"
+                           value="Disconnect"/>
+                </span>
+                </div>
+            </div>
+        </div>
+
+        <div id="chatPanel" class="panel panel-default">
+            <div class="panel-body">
+
+            </div>
+        </div>
+
+        <div class="sendMsgPanel">
+            <textarea id="msgInput" class="form-control" rows="3"></textarea>
+            <input class="btn btn-default" id="btnSend" type="button" value="Send">
+        </div>
+    </div>
+</div>
+
+<script type="text/jsTpl" data-name="msgOther">
+    <div class="msg other row">
+        <div class="col-md-4">
+            <div class="icon"></div>
+            <div class="msgContent">{{echo(context.msg)}}</div>
+        </div>
+    </div>
+</script>
+
+<script type="text/jsTpl" data-name="msgMe">
+    <div class="msg me row">
+        <div class="col-md-4 col-md-offset-8">
+            <div class="icon"></div>
+            <div class="msgContent">{{echo(context.msg)}}</div>
+        </div>
+    </div>
+</script>
+
+<script src="assets/jquery.min.js"></script>
+<script src="assets/bootstrap/bootstrap.min.js"></script>
+<script src="assets/toastr/toastr.min.js"></script>
+<script src="assets/Template.js"></script>
+<script src="assets/App.js"></script>
+</body>
+</html>
