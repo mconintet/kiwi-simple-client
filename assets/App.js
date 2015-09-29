@@ -69,8 +69,8 @@
         try {
             webSocket = new WebSocket(srvAddr);
 
-            $(webSocket).on('error', function (err) {
-                toastr.error(err.toString());
+            $(webSocket).on('error', function () {
+                toastr.error('Some errors occur, please view console output');
                 btnConnect.enable('Connect');
             });
 
